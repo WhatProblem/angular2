@@ -1,0 +1,25 @@
+.live{
+    background: #987654;
+    width: 1349px;
+    .liveContent{
+        max-width: 1349px;
+        .liveBanner{
+            width: 1250px;
+            height: 500px;
+            margin: 0 auto;
+            background: deeppink;
+        }
+        .curFilm {
+            width: 1250px;
+            height: 500px;
+            margin: 20px auto 0px;
+            background: #00ff00;
+        }
+        .nextFilm {
+            width: 1250px;
+            height: 500px;
+            margin: 20px auto 0px;
+            background: darkorange;
+        }
+    }
+}

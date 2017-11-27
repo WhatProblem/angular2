@@ -1,0 +1,50 @@
+.header {
+  width: 1349px;
+  height: 60px;
+  background: rgba(120, 120, 120, 0.75);
+  font-family: "微软雅黑";
+  font-weight: bold;
+  color: #000;
+
+  .logo,
+  .home,
+  .liveTV,
+  .vodHome {
+    float: right;
+    max-height: 60px;
+    line-height: 60px;
+    margin: 0 40px;
+  }
+
+  .logo {
+    width: 90px;
+
+    img {
+      width: 50%;
+      border-radius: 10px;
+      position: relative;
+      top: 10px;
+    }
+  }
+
+  .login,
+  .language {
+    float: left;
+    max-height: 60px;
+    line-height: 60px;
+    margin: 0 30px;
+
+    a {
+      border: 1px solid #686868;
+      background: #666;
+
+      &:hover {
+        background: #333;
+      }
+    }
+  }
+
+  .active {
+    border-bottom: 3px solid greenyellow;
+  }
+}

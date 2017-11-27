@@ -1,0 +1,34 @@
+<div class="vodDetail">
+    <div [ngStyle]="{'display': showLoading ? 'none':'block'}">
+        <div class="vodContent">
+            <div class="videoTop">
+                <h4>{{datas?.detailInfo.filmTitle}}</h4>
+                <div class="video">
+                    <video controls poster="{{datas?.detailInfo.imgSrc}}">
+                        <source src="../../../assets/vodDetail/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="trailers">
+                    <div class="trailersDetail">
+                        {{datas?.detailInfo.trailersDetail}}
+                    </div>
+                </div>
+            </div>
+            <div class="vodIntroduce">
+                <h3>Introduce:</h3>
+                <p class="introduceInfo">{{datas?.detailInfo.filmIntroduce}}</p>
+            </div>
+        </div>
+
+        <div class="vodRecm">
+            <app-vodRecm [vodRecmDatas]="vodRecmData" (changeVodCtrlLoading)="changeVodCtrlLoading($event)"></app-vodRecm>
+        </div>
+
+        <div class="popRecm">
+            <app-popRecm [popRecmDatas]="popRecmData" (changePopCtrlLoading)="changePopCtrlLoading($event)"></app-popRecm>
+        </div>
+    </div>
+    <div class="loading" [ngStyle]="{'display': showLoading ? 'block':'none'}">
+        <app-loading></app-loading>
+    </div>
+</div>

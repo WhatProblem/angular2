@@ -1,0 +1,74 @@
+.login {
+  width: 300px;
+  position: relative;
+  margin: 15% auto;
+  background: rgba(100, 100, 100, 0.9);
+  border-radius: 5px;
+  padding-bottom: 10px;
+
+  .loginTip {
+    margin: 0 auto;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .username {
+    margin-bottom: 5px;
+    padding-left: 20px;
+
+    input {
+      outline: none;
+      width: 190px;
+      height: 26px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border: none;
+    }
+  }
+
+  .pwd {
+    margin-bottom: 5px;
+    padding-left: 20px;
+
+    input {
+      outline: none;
+      width: 190px;
+      height: 26px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border: none;
+    }
+  }
+
+  .agree {
+    padding-left: 16px;
+    margin-bottom: 5px;
+  }
+
+  .logined {
+    text-align: center;
+    margin: 0 auto;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    background: #e43956;
+    cursor: pointer;
+  }
+
+  .closeLogin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    border-radius: 0 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+  }
+}

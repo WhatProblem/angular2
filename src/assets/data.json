@@ -1,0 +1,324 @@
+{
+  "recmVod": {
+    "recmVodImg": {
+      "id": 0,
+      "imgSrc": [
+        {
+          "imgId": 1,
+          "src": "./assets/img/recmVodImg/1.png",
+          "vodTitle": "vod不可变节目名称1"
+        },
+        {
+          "imgId": 2,
+          "src": "./assets/img/recmVodImg/2.png",
+          "vodTitle": "vod不可变节目名称2"
+        },
+        {
+          "imgId": 3,
+          "src": "./assets/img/recmVodImg/3.png",
+          "vodTitle": "vod不可变节目名称3"
+        },
+        {
+          "imgId": 4,
+          "src": "./assets/img/recmVodImg/4.png",
+          "vodTitle": "vod不可变节目名称4"
+        },
+        {
+          "imgId": 5,
+          "src": "./assets/img/recmVodImg/5.png",
+          "vodTitle": "vod不可变节目名称5"
+        },
+        {
+          "imgId": 6,
+          "src": "./assets/img/recmVodImg/6.png",
+          "vodTitle": "vod不可变节目名称6"
+        },
+        {
+          "imgId": 7,
+          "src": "./assets/img/recmVodImg/7.png",
+          "vodTitle": "vod不可变节目名称7"
+        },
+        {
+          "imgId": 8,
+          "src": "./assets/img/recmVodImg/8.png",
+          "vodTitle": "vod不可变节目名称8"
+        }
+      ]
+    }
+  },
+  "recmPop": {
+    "recmPopImg": {
+      "id": 0,
+      "imgSrc": [
+        {
+          "imgId": 1,
+          "src": "./assets/img/recmPopImg/1.png",
+          "popTitle": "Pop不可变节目名称1"
+        },
+        {
+          "imgId": 2,
+          "src": "./assets/img/recmPopImg/2.png",
+          "popTitle": "Pop不可变节目名称2"
+        },
+        {
+          "imgId": 3,
+          "src": "./assets/img/recmPopImg/3.png",
+          "popTitle": "Pop不可变节目名称3"
+        },
+        {
+          "imgId": 4,
+          "src": "./assets/img/recmPopImg/4.png",
+          "popTitle": "Pop不可变节目名称4"
+        },
+        {
+          "imgId": 5,
+          "src": "./assets/img/recmPopImg/5.png",
+          "popTitle": "Pop不可变节目名称5"
+        },
+        {
+          "imgId": 6,
+          "src": "./assets/img/recmPopImg/6.png",
+          "popTitle": "Pop不可变节目名称6"
+        },
+        {
+          "imgId": 7,
+          "src": "./assets/img/recmPopImg/7.png",
+          "popTitle": "Pop不可变节目名称7"
+        },
+        {
+          "imgId": 8,
+          "src": "./assets/img/recmPopImg/8.png",
+          "popTitle": "Pop不可变节目名称8"
+        }
+      ]
+    }
+  },
+  "vod": {
+    "vodDetail": [
+      {
+        "ID": 1,
+        "detailInfo": {
+          "imgId": "1",
+          "filmTitle": "film1",
+          "trailersDetail": "片花详情1",
+          "filmIntroduce": "each_.each(list, iteratee, [context]) Alias: forEach 遍历list中的所有元素，按顺序用每个元素当做参数调用 iteratee 函数。如果传递了context参数，则把iteratee绑定到context对象上。每次调用iteratee都会传递三个参数：(element, index, list)。如果list是个JavaScript对象，iteratee的参数是 (value, key, list))。返回list以方便链式调用。",
+          "imgSrc": "../../../assets/img/vodDetail/1.png"
+        }
+      },
+      {
+        "ID": 2,
+        "detailInfo": {
+          "imgId": "2",
+          "filmTitle": "film2",
+          "trailersDetail": "片花详情2",
+          "filmIntroduce": "map_.map(list, iteratee, [context]) Alias: collect 通过对list里的每个元素调用转换函数(iteratee迭代器)生成一个与之相对应的数组。iteratee传递三个参数：value，然后是迭代 index(或 key 愚人码头注：如果list是个JavaScript对象是，这个参数就是key)，最后一个是引用指向整个list。",
+          "imgSrc": "../../../assets/img/vodDetail/2.png"
+        }
+      },
+      {
+        "ID": 3,
+        "detailInfo": {
+          "imgId": "3",
+          "filmTitle": "film3",
+          "trailersDetail": "片花详情3",
+          "filmIntroduce": "find_.find(list, predicate, [context]) Alias: detect 在list中逐项查找，返回第一个通过predicate迭代函数真值检测的元素值，如果没有元素通过检测则返回 undefined。 如果找到匹配的元素，函数将立即返回，不会遍历整个list。",
+          "imgSrc": "../../../assets/img/vodDetail/3.png"
+        }
+      },
+      {
+        "ID": 4,
+        "detailInfo": {
+          "imgId": "4",
+          "filmTitle": "film4",
+          "trailersDetail": "片花详情4",
+          "filmIntroduce": "filter_.filter(list, predicate, [context]) Alias: select 遍历list中的每个值，返回所有通过predicate真值检测的元素所组成的数组。（愚人码头注：如果存在原生filter方法，则用原生的filter方法。）",
+          "imgSrc": "../../../assets/img/vodDetail/4.png"
+        }
+      },
+      {
+        "ID": 5,
+        "detailInfo": {
+          "imgId": "5",
+          "filmTitle": "film5",
+          "trailersDetail": "片花详情5",
+          "filmIntroduce": "contains_.contains(list, value, [fromIndex]) Alias: includes 如果list包含指定的value则返回true（愚人码头注：使用===检测）。如果list 是数组，内部使用indexOf判断。使用fromIndex来给定开始检索的索引位置。",
+          "imgSrc": "../../../assets/img/vodDetail/5.png"
+        }
+      },
+      {
+        "ID": 6,
+        "detailInfo": {
+          "imgId": "6",
+          "filmTitle": "film6",
+          "trailersDetail": "片花详情6",
+          "filmIntroduce": "invoke_.invoke(list, methodName, *arguments) 在list的每个元素上执行methodName方法。 任何传递给invoke的额外参数，invoke都会在调用methodName方法的时候传递给它。",
+          "imgSrc": "../../../assets/img/vodDetail/6.png"
+        }
+      },
+      {
+        "ID": 7,
+        "detailInfo": {
+          "imgId": "7",
+          "filmTitle": "film7",
+          "trailersDetail": "片花详情7",
+          "filmIntroduce": "pluck_.pluck(list, propertyName) pluck也许是map最常使用的用例模型的简化版本，即萃取数组对象中某属性值，返回一个数组。",
+          "imgSrc": "../../../assets/img/vodDetail/7.png"
+        }
+      },
+      {
+        "ID": 8,
+        "detailInfo": {
+          "imgId": "8",
+          "filmTitle": "film8",
+          "trailersDetail": "片花详情8",
+          "filmIntroduce": "sortBy_.sortBy(list, iteratee, [context]) 返回一个排序后的list拷贝副本。如果传递iteratee参数，iteratee将作为list中每个值的排序依据。用来进行排序迭代器也可以是属性名称的字符串(比如 length)。",
+          "imgSrc": "../../../assets/img/vodDetail/8.png"
+        }
+      }
+    ]
+  },
+  "liveTV": {
+    "liveBanner":[
+      {
+        "id":1,
+        "channelNum":1,
+        "channelName":"CCTV1",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/1.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":2,
+        "channelNum":2,
+        "channelName":"CCTV2",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/2.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":3,
+        "channelNum":3,
+        "channelName":"CCTV3",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/3.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":4,
+        "channelNum":4,
+        "channelName":"CCTV4",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/4.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":5,
+        "channelNum":5,
+        "channelName":"CCTV5",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/5.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":6,
+        "channelNum":6,
+        "channelName":"CCTV6",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/6.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":7,
+        "channelNum":7,
+        "channelName":"CCTV7",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/7.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":8,
+        "channelNum":8,
+        "channelName":"CCTV8",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/8.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":9,
+        "channelNum":9,
+        "channelName":"CCTV9",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/9.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":10,
+        "channelNum":10,
+        "channelName":"CCTV10",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/10.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":11,
+        "channelNum":11,
+        "channelName":"CCTV11",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/11.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":12,
+        "channelNum":12,
+        "channelName":"CCTV12",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/12.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":13,
+        "channelNum":13,
+        "channelName":"CCTV13",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/13.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":14,
+        "channelNum":14,
+        "channelName":"CCTV14",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/14.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":15,
+        "channelNum":15,
+        "channelName":"CCTV15",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/15.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":16,
+        "channelNum":16,
+        "channelName":"CCTV16",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/16.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":17,
+        "channelNum":17,
+        "channelName":"CCTV17",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/17.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":18,
+        "channelNum":18,
+        "channelName":"CCTV18",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/18.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":19,
+        "channelNum":19,
+        "channelName":"CCTV19",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/19.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id":20,
+        "channelNum":20,
+        "channelName":"CCTV20",
+        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/20.png",
+        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+      }
+    ]
+  }
+}

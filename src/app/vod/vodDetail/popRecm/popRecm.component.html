@@ -1,0 +1,19 @@
+<div class="recmPop">
+    <span class="leftIcon" (click)="moveLeft()">Left</span>
+    <div class="recm">
+        <h3>大家都喜欢</h3>
+        <div class="recmPopContent">
+            <div class="pop" *ngFor="let img of imgs;let i=index" (click)="jumpToVodDetail(img,i)" (mouseenter)="showSusDetail(img,i,$event)"
+                (mouseleave)="hideSusDetail(img,i,$event)">
+                <img src="{{img.src}}" alt="">
+                <div class="popTitle">
+                    {{img.popTitle}}
+                </div>
+            </div>
+            <div class="suspensionp" (mouseenter)="showSusDetails()" (mouseleave)="hideSusDetails()" [ngStyle]="{'visibility': showSus ? 'visible':'hidden'}">
+                <app-suspension></app-suspension>
+            </div>
+        </div>
+    </div>
+    <span class="rightIcon" (click)="moveRight()">Right</span>
+</div>

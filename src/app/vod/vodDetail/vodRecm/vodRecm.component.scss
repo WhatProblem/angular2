@@ -1,0 +1,74 @@
+.recmVod {
+  width: 100%;
+  height: 450px;
+  position: relative;
+
+  .recm {
+    width: 1240px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 450px;
+    position: relative;
+
+    h3 {
+      margin-bottom: 20px;
+      color: rgba(50, 50, 50, 0.75);
+      font-size: 20px;
+    }
+
+    .recmVodContent {
+      height: 340px;
+      position: absolute;
+      width: 1000%;
+
+      .vod {
+        width: 240px;
+        overflow: hidden;
+        margin-right: 10px;
+        float: left;
+        cursor: pointer;
+
+        img {
+          width: 238px;
+          height: 338px;
+          border: 1px solid #e43965;
+        }
+      }
+    }
+
+    .suspension {
+      visibility: hidden;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+  .leftIcon {
+    position: absolute;
+    top: 200px;
+    left: 5px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: hotpink;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  .rightIcon {
+    position: absolute;
+    top: 200px;
+    right: 5px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: hotpink;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+}

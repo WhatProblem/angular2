@@ -1,0 +1,110 @@
+.banner {
+  width: 100%;
+
+  .content {
+    width: 100%;
+
+    h3 {
+      height: 40px;
+      line-height: 40px;
+      background: deepskyblue;
+    }
+
+    .leftContent {
+      width: 400px;
+      height: 460px;
+      padding: 0 15px;
+      float: left;
+      background: palevioletred;
+      position: relative;
+
+      h4 {
+        height: 30px;
+        line-height: 30px;
+        background: blueviolet;
+      }
+
+      .listContainer {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        margin-top: 10px;
+
+        .listContent {
+          width: 100%;
+          // height: 400px;
+          // overflow: hidden;
+          // margin-top: 10px;
+
+          .channelList {
+            // width: 400px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 2px;
+            font-size: 18px;
+            background: rgba(90, 240, 180, 0.75);
+            border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+            cursor: pointer;
+
+            &:hover {
+              background: #ffaa99;
+            }
+
+            span {
+              float: left;
+            }
+
+            .curSelectFlag {
+              display: block;
+              width: 15px;
+              height: 15px;
+              background: #666;
+              border-radius: 8px;
+              position: relative;
+              top: 8px;
+            }
+
+            .channelNum {
+              display: block;
+              width: 30px;
+              height: 30px;
+              color: #352332;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .scroll {
+        width: 16px;
+        height: 400px;
+        position: absolute;
+        top: 40px;
+        right: 15px;
+        background: #666;
+
+        .scrollBar {
+          width: 10px;
+          // height: 20px;
+          border-radius: 5px;
+          background: lawngreen;
+          position: absolute;
+          top: 0px;
+          left: 3px;
+        }
+      }
+    }
+
+    .rightContent {
+      width: 800px;
+      height: 460px;
+      float: right;
+      background: greenyellow;
+
+      video {
+        width: 800px;
+        height: 460px;
+      }
+    }
+  }
+}

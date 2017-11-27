@@ -1,0 +1,56 @@
+.vodDetail {
+  width: 1349px;
+  position: relative;
+  margin-top: 20px;
+
+  .vodContent {
+    width: 1240px;
+    margin: 0 auto;
+
+    .videoTop {
+      h4 {
+        margin: 10px 0;
+        font-weight: normal;
+        color: #666;
+      }
+
+      .video {
+        width: 800px;
+        height: 500px;
+        float: left;
+
+        video {
+          width: 800px;
+          height: 500px;
+        }
+      }
+
+      .trailers {
+        width: 350px;
+        height: 500px;
+        background: #956;
+        float: right;
+      }
+
+      &:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+    }
+
+    .vodIntroduce {
+      width: 100%;
+
+      .introduceInfo {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 46px;
+        white-space: nowrap;
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 3;
+      }
+    }
+  }
+}

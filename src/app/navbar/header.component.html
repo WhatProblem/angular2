@@ -1,0 +1,29 @@
+<div class="header">
+    <div>
+        <div class="logo">
+            <a routerLink="/home"><img src="../../assets/img/default/logo.png" alt=""></a>
+        </div>
+
+        <div class="vodHome">
+            <a routerLink="/vod" routerLinkActive="active">{{'titleThree' | translate}}</a>
+        </div>
+
+        <div class="liveTV">
+            <a routerLink="/live" routerLinkActive="active">{{'titleTwo' | translate}}</a>
+        </div>
+
+        <div class="home">
+            <a routerLink="/home" routerLinkActive="active">{{'titleOne' | translate}}</a>
+        </div>
+
+        <div class="language">
+            <app-language></app-language>
+        </div>
+
+        <div class="login">
+            <a *ngIf="judgeLogin" (click)="login()">{{'login' | translate}}</a>
+            <a *ngIf="!judgeLogin" routerLink="/profile" routerLinkActive="active">test用户</a>
+            <a *ngIf="!judgeLogin" (click)="logOut()">{{'logOut' | translate}}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="recmVod">
+    <span class="leftIcon" (click)="moveLeft()">Left</span>
+    <div class="recm">
+        <h3>推荐影片</h3>
+        <div class="recmVodContent">
+            <div class="vod" *ngFor="let img of imgs;let i=index" (click)="jumpToVodDetail(img,i)" (mouseenter)="showSusDetail(img,i,$event)"
+                (mouseleave)="hideSusDetail(img,i,$event)">
+                <img src="{{img.src}}" alt="">
+                <div class="vodTitle">
+                    {{img.vodTitle}}
+                </div>
+            </div>
+            <div class="suspension" (mouseenter)="showSusDetails()" (mouseleave)="hideSusDetails()" [ngStyle]="{'visibility': showSus ? 'visible':'hidden'}">
+                <app-suspension></app-suspension>
+            </div>
+        </div>
+    </div>
+    <span class="rightIcon" (click)="moveRight()">Right</span>
+</div>

@@ -1,0 +1,17 @@
+.loadingImg {
+  width: 100%;
+  height: 600px;
+  background: #fff;
+
+  .img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 35%;
+    margin: 0 auto;
+
+    img {
+      width: 200px;
+    }
+  }
+}

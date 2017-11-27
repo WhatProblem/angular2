@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="homemain" [ngStyle]="{'display': showLoading ? 'none':'block'}">
+        <div class="banner">
+            <app-banner></app-banner>
+        </div>
+
+        <div class="recmList">
+            <div class="recmVod">
+                <app-recmVod [recmVodDatas]="recmVodData"></app-recmVod>
+            </div>
+            <div class="recmPop">
+                <app-recmPop [recmPopDatas]="recmPopData"></app-recmPop>
+            </div>
+        </div>
+    </div>
+    <div class="loading" [ngStyle]="{'display': showLoading ? 'block':'none'}">
+        <app-loading></app-loading>
+    </div>
+</div>

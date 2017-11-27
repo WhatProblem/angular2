@@ -1,0 +1,18 @@
+<div class="live">
+    <div [ngStyle]="{'display': showLoading ? 'none':'block'}">
+        <div class="liveContent">
+            <div class="liveBanner">
+                <app-liveBanner [bannerData]="bannerData"></app-liveBanner>
+            </div>
+            <div class="curFilm">
+                当前节目单
+            </div>
+            <div class="nextFilm">
+                未来节目单
+            </div>
+        </div>
+    </div>
+    <div class="loading" [ngStyle]="{'display': showLoading ? 'block':'none'}">
+        <app-loading></app-loading>
+    </div>
+</div>

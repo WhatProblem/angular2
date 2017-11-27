@@ -1,0 +1,28 @@
+<div class="banner">
+    <div class="content">
+        <h3>热播视频</h3>
+        <div class="leftContent">
+            <h4>频道列表</h4>
+            <div class="listContainer" id="listContainer">
+                <div class="listContent" id="listContent">
+                    <div class="channelList" *ngFor="let channelList of liveBanData;let i=index" (click)="selectChannel(channelList,i)">
+                        <span [ngStyle]="{'visibility':(showSelect === i)? 'visible' : 'hidden'}" class="curSelectFlag"></span>
+                        <span class="channelNum">{{channelList?.channelNum}}</span>
+                        <span class="channelName">{{channelList?.channelName}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll" id="scroll">
+                <div class="scrollBar" id="scrollBar" (mousedown)="dragScroll($event)"></div>
+            </div>
+        </div>
+        <div class="rightContent">
+            <div class="video">
+                <video poster="{{videoPoster}}" controls="controls">
+                    <source src="movie.ogg" type="video/ogg" />
+                    <source src="movie.mp4" type="video/mp4" /> Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>

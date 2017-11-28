@@ -1,4 +1,4 @@
-### *项目配置参考：https://github.com/gdi2290/angular-starter 如有错误之处请指出
+### 项目配置参考：https://github.com/gdi2290/angular-starter 如有错误之处请指出
 
 ### 使用angular完成多个模块与组件编写，数据通过HttpClientModule模块读取本地data.json数据
 

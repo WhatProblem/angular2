@@ -1,0 +1,16 @@
+<div class="liveCur">
+    <h3>{{'currentFilm' | translate}}</h3>
+    <div class="curContent">
+        <div class="content" id="content">
+            <div class="imgs" *ngFor="let poster of curData;let i=index" id="img-{{i+1}}">
+                <img src="{{poster.channelPosterSrc}}" alt="">
+            </div>
+        </div>
+    </div>
+    <span class="moveleft" (click)="moveLeft()">
+        <img src="../../../assets/img/default/left.png" alt="">
+    </span>
+    <span class="moveright" (click)="moveRight()">
+        <img src="../../../assets/img/default/right.png" alt="">
+    </span>
+</div>

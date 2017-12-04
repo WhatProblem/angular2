@@ -1,7 +1,9 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild } from '@angular/core';
 import * as _ from 'underscore';
 import { Router } from '@angular/router';
 import { GetDomService } from '../../../commonService/getDom.service';
+
+import { SuspensionComponent } from '../../../suspension/suspension.component';
 
 @Component({
     selector: 'app-popRecm',
@@ -10,11 +12,13 @@ import { GetDomService } from '../../../commonService/getDom.service';
 })
 
 export class PopRecmComponent implements OnInit {
-    private imgs;
-    private showSus = false;
+    public imgs;
+    public showSus = false;
     private moveIndex = 0;
     private imgsLen;
     private pages;
+
+    @ViewChild(SuspensionComponent) suspension: SuspensionComponent;
 
     constructor(
         private router: Router,
@@ -28,7 +32,7 @@ export class PopRecmComponent implements OnInit {
             this.imgs = data['recmPopImg']['imgSrc'];
 
             this.imgsLen = this.imgs['length'];
-            this.pages = Math.floor(this.imgsLen / 5);
+            this.pages = Math.ceil(this.imgsLen / 5);
         }
     }
 
@@ -50,23 +54,29 @@ export class PopRecmComponent implements OnInit {
         if (index % 5 === 0 || index % 5 === 1 || index % 5 === 2) {
             let sus = this.getDom.getClassDom('suspensionp')[0];
             let offsetX = event['target']['offsetLeft'];
-            console.log(offsetX);
+            // console.log(offsetX);
 
-            sus['style']['left'] = 230 + Number(offsetX) + 'px';
+            sus['style']['left'] = 240 + Number(offsetX) + 'px';
             sus['style']['top'] = 0 + 'px';
+            this.suspension.showLeftArrow = true;
+            this.suspension.showRightArrow = false;
         }
         if (index % 5 === 3 || index % 5 === 4) {
             let sus = this.getDom.getClassDom('suspensionp')[0];
             let offsetX = event['target']['offsetLeft'];
             console.log(offsetX);
 
-            sus['style']['left'] = -300 + Number(offsetX) + 'px';
+            sus['style']['left'] = -340 + Number(offsetX) + 'px';
             sus['style']['top'] = 0 + 'px';
+            this.suspension.showRightArrow = true;
+            this.suspension.showLeftArrow = false;
         }
     }
 
     showSusDetails() {
         this.showSus = true;
+        this.suspension.showRightArrow = false;
+        this.suspension.showLeftArrow = false;
     }
 
     hideSusDetails() {
@@ -76,6 +86,8 @@ export class PopRecmComponent implements OnInit {
     hideSusDetail(imgData, index, event) {
         this.showSus = false;
         console.log('false');
+        this.suspension.showRightArrow = false;
+        this.suspension.showLeftArrow = false;
     }
 
     moveLeft() {
@@ -85,7 +97,7 @@ export class PopRecmComponent implements OnInit {
             return;
         } else {
             if (this.getDom.getClassDom('recmPopContent')) {
-                this.getDom.getClassDom('recmPopContent')[0]['style']['transform'] = 'translate(' + 1250 * (this.moveIndex) + 'px)';
+                this.getDom.getClassDom('recmPopContent')[0]['style']['transform'] = 'translate(' + 1250 * (-this.moveIndex) + 'px)';
                 this.getDom.getClassDom('recmPopContent')[0]['style']['transition'] = 'all 1s linear';
             }
         }
@@ -93,8 +105,8 @@ export class PopRecmComponent implements OnInit {
 
     moveRight() {
         this.moveIndex++;
-        if (this.moveIndex > this.pages) {
-            this.moveIndex = this.pages;
+        if (this.moveIndex >= this.pages) {
+            this.moveIndex = this.pages - 1;
             return;
         } else {
             if (this.getDom.getClassDom('recmPopContent')) {

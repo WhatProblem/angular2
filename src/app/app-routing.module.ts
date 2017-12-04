@@ -4,11 +4,13 @@ import { RouterModule, PreloadAllModules, Routes } from '@angular/router';
 import { VodPreloadingStrategy } from './vod/vod-preloading.strategy';
 import { AuthGuard } from './profile/authGuard.service';
 
+import { ProfileComponent } from './profile/profile.component';
+
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: 'live',
-        loadChildren: 'app/live/live.module#LiveModule',
+        loadChildren: 'app/live/live.module#LiveModule'
         // data: { preload: true }
     },
     {
@@ -18,7 +20,9 @@ const appRoutes: Routes = [
     },
     {
         path: 'profile',
-        loadChildren: 'app/profile/profile.module#ProfileModule'
+        // loadChildren: 'app/profile/profile.module#ProfileModule'
+        component: ProfileComponent,
+        canActivate: [AuthGuard]
     }
 ];
 

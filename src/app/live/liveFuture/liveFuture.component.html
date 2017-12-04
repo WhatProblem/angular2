@@ -1,0 +1,16 @@
+<div class="liveFuture">
+    <h3>{{'futureFilm' | translate}}</h3>
+    <div class="futureContent">
+        <div class="content" id="futureContent">
+            <div class="imgs" *ngFor="let poster of futureData;let i=index" id="img-{{i+1}}">
+                <img src="{{poster.channelPosterSrc}}">
+            </div>
+        </div>
+    </div>
+    <span class="moveleft" (click)="moveLeft()">
+        <img src="../../../assets/img/default/left.png" alt="">
+    </span>
+    <span class="moveright" (click)="moveRight()">
+        <img src="../../../assets/img/default/right.png" alt="">
+    </span>
+</div>

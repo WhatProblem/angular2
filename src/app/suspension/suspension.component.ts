@@ -11,6 +11,8 @@ import { SuspensionService } from './suspension.service';
 
 export class SuspensionComponent implements OnInit {
     private suspensionData;
+    public showLeftArrow = false;
+    public showRightArrow = false;
 
     constructor(private suspension: SuspensionService) { }
 

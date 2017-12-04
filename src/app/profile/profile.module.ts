@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './authGuard.service';
 
 import { ProfileComponent } from './profile.component';
+import { ProfileUserNameComponent } from './profileUserName/profileUserName.component';
+import { ProfileFavFilmComponent } from './profileFavFilm/profileFavFilm.component';
+import { ProfileHistoryComponent } from './profileHistory/profileHistory.component';
+import { ProfileDeviceNameComponent } from './profileDeviceName/profileDeviceName.component';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 
@@ -15,7 +19,11 @@ import { ProfileRoutingModule } from './profile-routing.module';
         ProfileRoutingModule
     ],
     declarations: [
-        ProfileComponent
+        ProfileComponent,
+        ProfileUserNameComponent,
+        ProfileFavFilmComponent,
+        ProfileHistoryComponent,
+        ProfileDeviceNameComponent
     ],
     providers: [AuthGuard]
 })

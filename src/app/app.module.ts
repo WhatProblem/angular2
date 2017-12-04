@@ -23,6 +23,8 @@ import { LoginComponent } from './login/login.component';
 import { LanguageComponent } from './language/language.component';
 import { AppComponent } from './app.component';
 
+import { ProfileModule } from './profile/profile.module';
+
 import { HomeModule } from './home/home.module';
 import { VodDetailModule } from './vod/vodDetail/vodDetail.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -45,6 +47,7 @@ import '../styles/headings.css';
       useFactory: (createTranslateLoader),
       deps: [Http]
     }),
+    ProfileModule,
     HomeModule,
     VodDetailModule,
     AppRoutingModule

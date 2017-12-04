@@ -4,5 +4,9 @@
     "titleThree": "POPPAGE",
     "langu": "En",
     "login": "login",
-    "logOut": "logOut"
+    "logOut": "logOut",
+    "recommend": "RECOMMEND FILM",
+    "popular": "POPULAR FILM",
+    "currentFilm": "CURRENT FILM",
+    "futureFilm": "FUTURE FILM"
 }

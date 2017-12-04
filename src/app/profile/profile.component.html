@@ -1,3 +1,25 @@
 <div class="profile">
-    <h1>个人空间</h1>
+    <div class="content">
+        <div class="rightTitle">
+            <div class="imgs">
+                <img src="" alt="">
+            </div>
+            <div class="userName">
+                <a routerLink="./userName" routerLinkActive="active">用户名</a>
+            </div>
+            <div class="favFilm">
+                <a routerLink="./favFilm" routerLinkActive="active">喜欢的影片</a>
+            </div>
+            <div class="history">
+                <a routerLink="./history" routerLinkActive="active">历史记录</a>
+            </div>
+            <div class="deviceName">
+                <a routerLink="./deviceName" routerLinkActive="active">设备名称</a>
+            </div>
+        </div>
+        <div class="leftContent">
+            这是router-outlet部分
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>

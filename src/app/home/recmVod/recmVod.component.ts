@@ -1,8 +1,10 @@
-import { Component, OnInit, OnDestroy, Input, Output } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import * as _ from 'underscore';
 import { EventService } from '../../commonService/event.service';
 import { GetDomService } from '../../commonService/getDom.service';
+
+import { SuspensionComponent } from '../../suspension/suspension.component';
 
 
 @Component({
@@ -12,14 +14,15 @@ import { GetDomService } from '../../commonService/getDom.service';
 })
 
 export class RecmVodComponent implements OnInit, OnDestroy {
-    private imgs;
-    private curSuspension;
-    private ctrlSuspensionShow = false;
+    public imgs;
     private moveIndex = 0;
-    // private moveRightTimer;
-    // private moveLeftTimer;
     private imgsLen;
     private pages;
+    public showSus = false;
+    // private showLeftArrow = true;
+    // private showRightArrow = true;
+
+    @ViewChild(SuspensionComponent) suspension: SuspensionComponent;
 
     constructor(
         private router: Router,
@@ -31,7 +34,7 @@ export class RecmVodComponent implements OnInit, OnDestroy {
             this.imgs = data['recmVodImg']['imgSrc'];
 
             this.imgsLen = this.imgs['length'];
-            this.pages = Math.floor(this.imgsLen / 5);
+            this.pages = Math.ceil(this.imgsLen / 5);
             console.log('imgsVod资源查看' + this.imgsLen);
         }
     }
@@ -42,8 +45,7 @@ export class RecmVodComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        // clearInterval(this.moveRightTimer);
-        // clearInterval(this.moveLeftTimer);
+
     }
 
     jumpToVodDetail(imgInfo, i) {
@@ -51,26 +53,35 @@ export class RecmVodComponent implements OnInit, OnDestroy {
         this.router.navigate(['/vod/vodDetail', to]);
     }
 
+    // 悬浮框
     showHomeDetail(recmVodData, index, event) {
-        this.curSuspension = index;
-        this.ctrlSuspensionShow = true;
-
-        console.log(recmVodData);
-        console.log(index);
-        console.log(event);
-        let susObj = {
-            'recmVodData': recmVodData,
-            'index': index,
-            'event': event
-        };
-
-        EventService.emit('showHomeSuspension', susObj);
+        let offsetX = event['target']['offsetLeft'];
+        if (index % 5 === 0 || index % 5 === 1 || index % 5 === 2) {
+            this.getDom.getIdDom('suspension')['style']['left'] = offsetX + 240 + 'px';
+            this.suspension.showLeftArrow = true;
+            this.suspension.showRightArrow = false;
+        } else {
+            this.getDom.getIdDom('suspension')['style']['left'] = offsetX - 340 + 'px';
+            this.suspension.showRightArrow = true;
+            this.suspension.showLeftArrow = false;
+        }
+        this.showSus = true;
     }
 
     hideHomeDetail(recmVodData, index, event) {
-        this.ctrlSuspensionShow = false;
+        this.showSus = false;
+        this.suspension.showLeftArrow = false;
+        this.suspension.showRightArrow = false;
     }
-
+    showHomeDetails() {
+        this.showSus = true;
+        this.suspension.showLeftArrow = false;
+        this.suspension.showRightArrow = false;
+    }
+    hideHomeDetails() {
+        this.showSus = false;
+    }
+    // 鼠标点击左移动
     moveLeft() {
         this.moveIndex--;
         if (this.moveIndex < 0) {
@@ -78,47 +89,19 @@ export class RecmVodComponent implements OnInit, OnDestroy {
             return;
         } else {
             if (this.getDom.getClassDom('recmVodContent')) {
-                // let distance = 62.5;
-                // let self = this;
-                // clearInterval(self.moveLeftTimer);
-                // clearInterval(self.moveRightTimer);
-                // this.moveLeftTimer = setInterval(() => {
-                //     let start = Number((self.getDom.getClassDom('recmVodContent')[0]['style']['left']).slice(0, -2));
-                //     let endTarget = start + distance;
-                //     self.getDom.getClassDom('recmVodContent')[0]['style']['left'] = endTarget + 'px';
-                //     if (Number(endTarget) >= 0) {
-                //         self.getDom.getClassDom('recmVodContent')[0]['style']['left'] = 0 + 'px';
-                //         clearInterval(self.moveLeftTimer);
-                //     }
-                // }, 20);
-
-                this.getDom.getClassDom('recmVodContent')[0]['style']['transform'] = 'translate(' + 1250 * (this.moveIndex) + 'px)';
+                this.getDom.getClassDom('recmVodContent')[0]['style']['transform'] = 'translate(' + 1250 * (-this.moveIndex) + 'px)';
                 this.getDom.getClassDom('recmVodContent')[0]['style']['transition'] = 'all 1s linear';
             }
         }
     }
-
+    // 鼠标点击右移动
     moveRight() {
         this.moveIndex++;
-        if (this.moveIndex > this.pages) {
-            this.moveIndex = this.pages;
+        if (this.moveIndex >= this.pages) {
+            this.moveIndex = this.pages - 1;
             return;
         } else {
             if (this.getDom.getClassDom('recmVodContent')) {
-                // let distance = 62.5;
-                // let self = this;
-                // clearInterval(self.moveLeftTimer);
-                // clearInterval(self.moveRightTimer);
-                // this.moveRightTimer = setInterval(() => {
-                //     let start = Number((self.getDom.getClassDom('recmVodContent')[0]['style']['left']).slice(0, -2));
-                //     let endTarget = start + (-1) * self.moveIndex * distance;
-                //     self.getDom.getClassDom('recmVodContent')[0]['style']['left'] = endTarget + 'px';
-                //     if (Number(endTarget) <= Number(-1250)) {
-                //         self.getDom.getClassDom('recmVodContent')[0]['style']['left'] = -1250 + 'px';
-                //         clearInterval(self.moveRightTimer);
-                //     }
-                // }, 20);
-
                 this.getDom.getClassDom('recmVodContent')[0]['style']['transform'] = 'translate(' + (-1250 * this.moveIndex) + 'px)';
                 this.getDom.getClassDom('recmVodContent')[0]['style']['transition'] = 'all 1s linear';
             }

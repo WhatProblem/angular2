@@ -11,13 +11,13 @@ import { EventService } from '../commonService/event.service';
 })
 
 export class LiveComponent implements OnInit, OnDestroy {
-    private liveTVData;
-    private bannerData;
-    private liveCurData;
-    private liveNextData;
+    public liveTVData;
+    public bannerData;
+    public liveCurData;
+    public liveFutureData;
 
     // 加载圈模拟后台数据刷新
-    private showLoading = true;
+    public showLoading = true;
     private loadingTimer;
 
     constructor(
@@ -34,9 +34,10 @@ export class LiveComponent implements OnInit, OnDestroy {
             this.liveTVData = data['liveTV'];
 
             this.bannerData = this.liveTVData['liveBanner'];
-            console.log(this.bannerData);
-            // this.liveCurData = data[''];
+            this.liveCurData = this.liveTVData['liveCur'];
+            this.liveFutureData = this.liveTVData['liveFuture'];
             // this.liveNextData = data[''];
+            console.log('预加载预加载预加载');
         });
     }
 

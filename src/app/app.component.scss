@@ -1,6 +1,7 @@
 .body {
+  width: 100%;
   position: relative;
-  background: rgba(80,150,60,0.5);
+  // background: rgba(200,50,200,0.5);
 
   .nav {
     position: fixed;
@@ -15,6 +16,7 @@
 
   #login {
     width: 100%;
+    min-width: 1349px;
     height: 100%;
     position: absolute;
     z-index: 1000;

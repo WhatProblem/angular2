@@ -1,0 +1,77 @@
+.liveFuture {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  h3 {
+    width: 1100px;
+    margin: 5px auto -20px;
+  }
+
+  .futureContent {
+    width: 1100px;
+    height: 450px;
+    background: #e7c589;
+    margin: 25px auto;
+    overflow: hidden;
+    position: relative;
+
+    .content {
+      position: absolute;
+      width: 1000%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+
+      .imgs {
+        width: 358px;
+        float: left;
+        border: 1px solid red;
+        overflow: hidden;
+      }
+
+      .imgs:nth-child(5n+5) {
+        height: 448px;
+        margin-right: 10px;
+      }
+
+      .imgs:nth-child(5n+2),
+      .imgs:nth-child(5n+4) {
+        height: 218px;
+        margin-left: -370px;
+        margin-top: 230px;
+      }
+
+      .imgs:nth-child(5n+1),
+      .imgs:nth-child(5n+3) {
+        height: 218px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .moveleft,
+  .moveright {
+    position: absolute;
+    width: 55px;
+    height: 146px;
+    text-align: center;
+    line-height: 146px;
+    cursor: pointer;
+
+    img {
+      width: 55px;
+    }
+  }
+
+  .moveleft {
+    top: 33%;
+    left: 12px;
+  }
+
+  .moveright {
+    top: 33%;
+    right: 12px;
+  }
+}

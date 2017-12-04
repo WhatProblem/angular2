@@ -12,6 +12,6 @@ export class VodComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        console.log(11111111111111111111111111111111);
+        console.log('vod预加载');
     }
 }

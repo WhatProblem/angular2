@@ -2,7 +2,11 @@
     "titleOne": "首页",
     "titleTwo": "当前收看",
     "titleThree": "大家喜欢",
-    "langu":"中文",
-    "login":"登录",
-    "logOut":"退出登录"
+    "langu": "中文",
+    "login": "登录",
+    "logOut": "退出登录",
+    "recommend": "推荐列表",
+    "popular": "大家推荐",
+    "currentFilm": "当前影片",
+    "futureFilm": "未来影片"
 }

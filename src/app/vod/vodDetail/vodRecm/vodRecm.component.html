@@ -1,7 +1,9 @@
 <div class="recmVod">
-    <span class="leftIcon" (click)="moveLeft()">Left</span>
+    <span class="leftIcon" (click)="moveLeft()">
+        <img src="../../../../assets/img/default/left.png" alt="">
+    </span>
     <div class="recm">
-        <h3>推荐影片</h3>
+        <h3>{{'recommend' | translate}}</h3>
         <div class="recmVodContent">
             <div class="vod" *ngFor="let img of imgs;let i=index" (click)="jumpToVodDetail(img,i)" (mouseenter)="showSusDetail(img,i,$event)"
                 (mouseleave)="hideSusDetail(img,i,$event)">
@@ -15,5 +17,7 @@
             </div>
         </div>
     </div>
-    <span class="rightIcon" (click)="moveRight()">Right</span>
+    <span class="rightIcon" (click)="moveRight()">
+        <img src="../../../../assets/img/default/right.png" alt="">
+    </span>
 </div>

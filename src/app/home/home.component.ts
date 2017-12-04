@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // 模仿页面初始化加载圈
     private loadingTimer;
-    private showLoading = true;
+    public showLoading = true;
 
     constructor(
         private http: HttpClient,

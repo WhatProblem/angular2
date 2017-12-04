@@ -178,146 +178,304 @@
     ]
   },
   "liveTV": {
-    "liveBanner":[
+    "liveBanner": [
       {
-        "id":1,
-        "channelNum":1,
-        "channelName":"CCTV1",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/1.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 1,
+        "channelNum": 1,
+        "channelName": "CCTV1",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/1.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":2,
-        "channelNum":2,
-        "channelName":"CCTV2",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/2.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 2,
+        "channelNum": 2,
+        "channelName": "CCTV2",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/2.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":3,
-        "channelNum":3,
-        "channelName":"CCTV3",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/3.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 3,
+        "channelNum": 3,
+        "channelName": "CCTV3",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/3.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":4,
-        "channelNum":4,
-        "channelName":"CCTV4",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/4.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 4,
+        "channelNum": 4,
+        "channelName": "CCTV4",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/4.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":5,
-        "channelNum":5,
-        "channelName":"CCTV5",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/5.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 5,
+        "channelNum": 5,
+        "channelName": "CCTV5",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/5.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":6,
-        "channelNum":6,
-        "channelName":"CCTV6",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/6.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 6,
+        "channelNum": 6,
+        "channelName": "CCTV6",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/6.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":7,
-        "channelNum":7,
-        "channelName":"CCTV7",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/7.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 7,
+        "channelNum": 7,
+        "channelName": "CCTV7",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/7.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":8,
-        "channelNum":8,
-        "channelName":"CCTV8",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/8.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 8,
+        "channelNum": 8,
+        "channelName": "CCTV8",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/8.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":9,
-        "channelNum":9,
-        "channelName":"CCTV9",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/9.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 9,
+        "channelNum": 9,
+        "channelName": "CCTV9",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/9.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":10,
-        "channelNum":10,
-        "channelName":"CCTV10",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/10.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 10,
+        "channelNum": 10,
+        "channelName": "CCTV10",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/10.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":11,
-        "channelNum":11,
-        "channelName":"CCTV11",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/11.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 11,
+        "channelNum": 11,
+        "channelName": "CCTV11",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/11.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":12,
-        "channelNum":12,
-        "channelName":"CCTV12",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/12.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 12,
+        "channelNum": 12,
+        "channelName": "CCTV12",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/12.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":13,
-        "channelNum":13,
-        "channelName":"CCTV13",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/13.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 13,
+        "channelNum": 13,
+        "channelName": "CCTV13",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/13.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":14,
-        "channelNum":14,
-        "channelName":"CCTV14",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/14.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 14,
+        "channelNum": 14,
+        "channelName": "CCTV14",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/14.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":15,
-        "channelNum":15,
-        "channelName":"CCTV15",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/15.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 15,
+        "channelNum": 15,
+        "channelName": "CCTV15",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/15.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":16,
-        "channelNum":16,
-        "channelName":"CCTV16",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/16.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 16,
+        "channelNum": 16,
+        "channelName": "CCTV16",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/16.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":17,
-        "channelNum":17,
-        "channelName":"CCTV17",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/17.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 17,
+        "channelNum": 17,
+        "channelName": "CCTV17",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/17.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":18,
-        "channelNum":18,
-        "channelName":"CCTV18",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/18.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 18,
+        "channelNum": 18,
+        "channelName": "CCTV18",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/18.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":19,
-        "channelNum":19,
-        "channelName":"CCTV19",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/19.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 19,
+        "channelNum": 19,
+        "channelName": "CCTV19",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/19.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       },
       {
-        "id":20,
-        "channelNum":20,
-        "channelName":"CCTV20",
-        "channelPosterSrc":"../../../assets/img/liveTVImg/liveBannerImg/20.png",
-        "channelVideoSrc":"../../../assets/img/liveTVVideo/1.video"
+        "id": 20,
+        "channelNum": 20,
+        "channelName": "CCTV20",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveBannerImg/20.png",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      }
+    ],
+    "liveCur": [
+      {
+        "id": 1,
+        "channelNum": 1,
+        "channelContent": "CCTV1",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/1.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 2,
+        "channelNum": 2,
+        "channelContent": "CCTV2",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/2.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 3,
+        "channelNum": 3,
+        "channelContent": "CCTV3",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/3.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 4,
+        "channelNum": 4,
+        "channelContent": "CCTV4",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/4.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 5,
+        "channelNum": 5,
+        "channelContent": "CCTV5",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/5.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 6,
+        "channelNum": 6,
+        "channelContent": "CCTV6",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/6.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 7,
+        "channelNum": 7,
+        "channelContent": "CCTV7",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/7.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 8,
+        "channelNum": 8,
+        "channelContent": "CCTV8",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/8.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 9,
+        "channelNum": 9,
+        "channelContent": "CCTV9",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/9.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 10,
+        "channelNum": 10,
+        "channelContent": "CCTV10",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/10.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 11,
+        "channelNum": 11,
+        "channelContent": "CCTV11",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveCurImg/11.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      }
+    ],
+    "liveFuture": [
+      {
+        "id": 1,
+        "channelNum": 1,
+        "channelContent": "CCTV1",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/1.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 2,
+        "channelNum": 2,
+        "channelContent": "CCTV2",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/2.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 3,
+        "channelNum": 3,
+        "channelContent": "CCTV3",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/3.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 4,
+        "channelNum": 4,
+        "channelContent": "CCTV4",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/4.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 5,
+        "channelNum": 5,
+        "channelContent": "CCTV5",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/5.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 6,
+        "channelNum": 6,
+        "channelContent": "CCTV6",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/6.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 7,
+        "channelNum": 7,
+        "channelContent": "CCTV7",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/7.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 8,
+        "channelNum": 8,
+        "channelContent": "CCTV8",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/8.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 9,
+        "channelNum": 9,
+        "channelContent": "CCTV9",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/9.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 10,
+        "channelNum": 10,
+        "channelContent": "CCTV10",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/10.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
+      },
+      {
+        "id": 11,
+        "channelNum": 11,
+        "channelContent": "CCTV11",
+        "channelPosterSrc": "../../../assets/img/liveTVImg/liveFuture/11.jpg",
+        "channelVideoSrc": "../../../assets/img/liveTVVideo/1.video"
       }
     ]
   }

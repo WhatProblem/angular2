@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import * as _ from 'underscore';
 import { GetDomService } from '../../../commonService/getDom.service';
 
+import { SuspensionComponent } from '../../../suspension/suspension.component';
 
 @Component({
     selector: 'app-vodRecm',
@@ -11,11 +12,13 @@ import { GetDomService } from '../../../commonService/getDom.service';
 })
 
 export class VodRecmComponent implements OnInit {
-    private imgs;
-    private showSus = false;
+    public imgs;
+    public showSus = false;
     private moveIndex = 0;
     private imgsLen;
     private pages;
+
+    @ViewChild(SuspensionComponent) suspension: SuspensionComponent;
 
     constructor(
         private router: Router,
@@ -29,7 +32,7 @@ export class VodRecmComponent implements OnInit {
             this.imgs = data['recmVodImg']['imgSrc'];
 
             this.imgsLen = this.imgs['length'];
-            this.pages = Math.floor(this.imgsLen / 5);
+            this.pages = Math.ceil(this.imgsLen / 5);
         }
     }
 
@@ -51,16 +54,20 @@ export class VodRecmComponent implements OnInit {
             let offsetX = event['target']['offsetLeft'];
             // console.log(offsetX);
 
-            sus['style']['left'] = 230 + Number(offsetX) + 'px';
+            sus['style']['left'] = 240 + Number(offsetX) + 'px';
             sus['style']['top'] = 0 + 'px';
+            this.suspension.showLeftArrow = true;
+            this.suspension.showRightArrow = false;
         }
         if (index % 5 === 3 || index % 5 === 4) {
             let sus = this.getDom.getClassDom('suspension')[0];
             let offsetX = event['target']['offsetLeft'];
             // console.log(offsetX);
 
-            sus['style']['left'] = -300 + Number(offsetX) + 'px';
+            sus['style']['left'] = -340 + Number(offsetX) + 'px';
             sus['style']['top'] = 0 + 'px';
+            this.suspension.showRightArrow = true;
+            this.suspension.showLeftArrow = false;
         }
     }
 
@@ -70,11 +77,15 @@ export class VodRecmComponent implements OnInit {
 
     hideSusDetails() {
         this.showSus = false;
+        this.suspension.showRightArrow = false;
+        this.suspension.showLeftArrow = false;
     }
 
     hideSusDetail(imgData, index, event) {
         this.showSus = false;
-        console.log('false');
+        // console.log('false');
+        this.suspension.showRightArrow = false;
+        this.suspension.showLeftArrow = false;
     }
 
     moveLeft() {
@@ -84,7 +95,7 @@ export class VodRecmComponent implements OnInit {
             return;
         } else {
             if (this.getDom.getClassDom('recmVodContent')) {
-                this.getDom.getClassDom('recmVodContent')[0]['style']['transform'] = 'translate(' + 1250 * (this.moveIndex) + 'px)';
+                this.getDom.getClassDom('recmVodContent')[0]['style']['transform'] = 'translate(' + 1250 * (-this.moveIndex) + 'px)';
                 this.getDom.getClassDom('recmVodContent')[0]['style']['transition'] = 'all 1s linear';
             }
         }
@@ -92,7 +103,7 @@ export class VodRecmComponent implements OnInit {
 
     moveRight() {
         this.moveIndex++;
-        if (this.moveIndex > this.pages) {
+        if (this.moveIndex >= this.pages) {
             this.moveIndex = this.pages;
             return;
         } else {

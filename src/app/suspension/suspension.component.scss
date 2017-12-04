@@ -4,6 +4,26 @@
   padding: 20px;
   background: rgba(60, 60, 60, 0.95);
   border-radius: 5px;
+  position: relative;
+
+  .arrowLeft,
+   {
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid rgba(60, 60, 60, 0.95);
+    top: 45%;
+    left: -25px;
+  }
+
+  .arrowRight {
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid rgba(60, 60, 60, 0.95);
+    top: 45%;
+    right: -25px;
+  }
 
   .susContent {
     position: relative;

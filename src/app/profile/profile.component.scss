@@ -1,3 +1,47 @@
-h1{
-    background: #e43930;
+.profile {
+  width: 100%;
+  min-width: 1349px;
+  background: #e43930;
+
+  .content {
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    background: greenyellow;
+    clear: both;
+    content: '';
+    display: table;
+    position: relative;
+    top: 20px;
+
+    .leftContent {
+      float: left;
+      width: 80%;
+    }
+
+    .rightTitle {
+      float: right;
+      width: 20%;
+      border-left: 1px solid mediumvioletred;
+      color: #333;
+      font-weight: bold;
+      div {
+          height: 30x;
+          line-height: 30px;
+          border-bottom: 1px solid mediumvioletred;
+          background: hotpink;
+          cursor: pointer;
+          &:hover {
+              background: #ff00bb;
+          }
+      }
+      .imgs {
+          width: 100%;
+          height: 200px;
+      }
+      .active{
+        background: orangered;
+      }
+    }
+  }
 }

@@ -15,13 +15,13 @@ import * as _ from 'underscore';
 
 export class VodDetailComponent implements OnInit, OnDestroy {
     private vodDetailData;
-    private datas;
-    private vodRecmData;
-    private popRecmData;
+    public datas;
+    public vodRecmData;
+    public popRecmData;
 
     // 模仿页面初始化加载圈
     private loadingTimer;
-    private showLoading = true;
+    public showLoading = true;
 
     constructor(
         private http: HttpClient,

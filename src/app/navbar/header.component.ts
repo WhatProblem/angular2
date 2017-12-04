@@ -11,7 +11,7 @@ import { LoginService } from '../login/login.service';
 })
 
 export class HeaderComponent implements OnInit {
-    private judgeLogin = true;
+    public judgeLogin = true;
     constructor(
         public loginService: LoginService,
         private router: Router

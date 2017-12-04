@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import * as _ from 'underscore';
 // import { EventService } from '../../commonService/event.service';
 import { GetDomService } from '../../commonService/getDom.service';
+import { SuspensionComponent } from '../../suspension/suspension.component';
 
 
 @Component({
@@ -12,12 +13,15 @@ import { GetDomService } from '../../commonService/getDom.service';
 })
 
 export class RecmPopComponent implements OnInit {
-    private imgs;
+    public imgs;
     private curSuspension;
     private ctrlSuspensionShow = false;
     private moveIndex = 0;
     private imgsLen;
     private pages;
+    public showSus = false;
+
+    @ViewChild(SuspensionComponent) suspension: SuspensionComponent;
 
     constructor(
         private router: Router,
@@ -29,7 +33,7 @@ export class RecmPopComponent implements OnInit {
             this.imgs = data['recmPopImg']['imgSrc'];
 
             this.imgsLen = this.imgs['length'];
-            this.pages = Math.floor(this.imgsLen / 5);
+            this.pages = Math.ceil(this.imgsLen / 5);
             // console.log(this.imgs);
         }
     }
@@ -38,25 +42,33 @@ export class RecmPopComponent implements OnInit {
 
     }
 
+    // 悬浮框
     showHomeDetail(recmVodData, index, event) {
-        this.curSuspension = index;
-        this.ctrlSuspensionShow = true;
-
-        console.log(recmVodData);
-        console.log(index);
-        console.log(event);
-        let susObj = {
-            'recmVodData': recmVodData,
-            'index': index,
-            'event': event
-        };
-
-        // EventService.emit('showHomeSuspension', susObj);
+        let offsetX = event['target']['offsetLeft'];
+        if (index % 5 === 0 || index % 5 === 1 || index % 5 === 2) {
+            this.getDom.getIdDom('suspensions')['style']['left'] = offsetX + 240 + 'px';
+            this.suspension.showLeftArrow = true;
+            this.suspension.showRightArrow = false;
+        } else {
+            this.getDom.getIdDom('suspensions')['style']['left'] = offsetX - 340 + 'px';
+            this.suspension.showRightArrow = true;
+            this.suspension.showLeftArrow = false;
+        }
+        this.showSus = true;
     }
 
     hideHomeDetail(recmVodData, index, event) {
-        this.ctrlSuspensionShow = false;
-        // EventService.emit('hideHomeSuspension');
+        this.showSus = false;
+        this.suspension.showLeftArrow = false;
+        this.suspension.showRightArrow = false;
+    }
+    showHomeDetails() {
+        this.showSus = true;
+        this.suspension.showLeftArrow = false;
+        this.suspension.showRightArrow = false;
+    }
+    hideHomeDetails() {
+        this.showSus = false;
     }
 
     jumpToVodDetail(imgInfo, i) {
@@ -71,7 +83,7 @@ export class RecmPopComponent implements OnInit {
             return;
         } else {
             if (this.getDom.getClassDom('recmPopContent')) {
-                this.getDom.getClassDom('recmPopContent')[0]['style']['transform'] = 'translate(' + 1250 * (this.moveIndex) + 'px)';
+                this.getDom.getClassDom('recmPopContent')[0]['style']['transform'] = 'translate(' + 1250 * (-this.moveIndex) + 'px)';
                 this.getDom.getClassDom('recmPopContent')[0]['style']['transition'] = 'all 1s linear';
             }
         }
@@ -79,8 +91,8 @@ export class RecmPopComponent implements OnInit {
 
     moveRight() {
         this.moveIndex++;
-        if (this.moveIndex > this.pages) {
-            this.moveIndex = this.pages;
+        if (this.moveIndex >= this.pages) {
+            this.moveIndex = this.pages - 1;
             return;
         } else {
             if (this.getDom.getClassDom('recmPopContent')) {

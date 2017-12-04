@@ -10,8 +10,8 @@ import { GetDomService } from '../../commonService/getDom.service';
 })
 
 export class LiveBannerComponent implements OnInit, OnDestroy {
-    private liveBanData;
-    private videoPoster;
+    public liveBanData;
+    public videoPoster;
     private showSelect;
     private scroll;
     private scrollBar;
@@ -35,30 +35,30 @@ export class LiveBannerComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        let self = this;
-        this.loadEleTimer = setTimeout(function () {
-            // 所需元素
-            self.scroll = self.getDom.getIdDom('scroll');
-            self.scrollBar = self.getDom.getIdDom('scrollBar');
-            self.listContainer = self.getDom.getIdDom('listContainer');
-            self.listContent = self.getDom.getIdDom('listContent');
+        // let self = this;
+        // this.loadEleTimer = setTimeout(function () {
+        //     // 所需元素
+        //     self.scroll = self.getDom.getIdDom('scroll');
+        //     self.scrollBar = self.getDom.getIdDom('scrollBar');
+        //     self.listContainer = self.getDom.getIdDom('listContainer');
+        //     self.listContent = self.getDom.getIdDom('listContent');
 
-            self.rate = parseInt(self.listContainer['offsetHeight']) / parseInt(self.listContent['offsetHeight']);
-            self.scrollBar['style']['height'] = self.rate * self.scroll['offsetHeight'] + 'px';
-            console.log(self.rate);
-        }, 600);
+        //     self.rate = parseInt(self.listContainer['offsetHeight']) / parseInt(self.listContent['offsetHeight']);
+        //     self.scrollBar['style']['height'] = self.rate * self.scroll['offsetHeight'] + 'px';
+        //     console.log(self.rate);
+        // }, 600);
     }
 
-    dragScroll(e) {
-        console.log(e);
-        let targetSroll = e['target'];
-        let self = this;
-        targetSroll.addEventListener('mousemove', (e) => {
-            let sTop = targetSroll.clientY;
-            targetSroll['style']['top'] = targetSroll['offsetTop'] + 'px';
-            self.listContent['style']['top'] = -self.rate * (parseInt(self.listContent['offsetHeight']) / parseInt(self.listContainer['offsetHeight'])) + 'px';
-        });
-    }
+    // dragScroll(e) {
+    //     console.log(e);
+    //     let targetSroll = e['target'];
+    //     let self = this;
+    //     targetSroll.addEventListener('mousemove', (e) => {
+    //         let sTop = targetSroll.clientY;
+    //         targetSroll['style']['top'] = targetSroll['offsetTop'] + 'px';
+    //         self.listContent['style']['top'] = -self.rate * (parseInt(self.listContent['offsetHeight']) / parseInt(self.listContainer['offsetHeight'])) + 'px';
+    //     });
+    // }
 
     scrollGo() {
 

@@ -10,7 +10,7 @@ const liveRoutes: Routes = [
         path: '',
         component: LiveComponent
     }
-]
+];
 
 
 @NgModule({

@@ -21,7 +21,7 @@ npm run build:prod
 ### AoT
 npm run build:aot
 ```
-时间关系，项目持续更新中...<br>
-如有不当之处请指出，谢谢。。。<br>
+时间关系，项目持续更新中...
+如有不当之处请指出，谢谢。。。
 
-如有配置不清楚之处请参考：https://github.com/gdi2290/angular-starter<br>
+如有配置不清楚之处请参考：https://github.com/gdi2290/angular-starter
